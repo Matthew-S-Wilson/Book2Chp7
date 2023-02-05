@@ -1,0 +1,26 @@
+
+
+const computer = {
+	id: 1,
+	manufacturer: "Apple",
+	make: "Macbook",
+	model: "Pro",
+	specs: {
+		memory: 32,
+		hardDrive: "500 GB",
+		processor: 2.4
+	}
+}
+
+const computerHtmlMaker = (computerObject) => {
+    const computerHtmlSection = `<section id="computer--${computer.id}">  
+    <h1>${computer.manufacturer} ${computer.make}</h1>
+    <div>Model:${computer.model}</div>
+    <div>Memory: ${computer.specs.memory}GB</div>
+    <div>Hard Drive Space: ${computer.specs.hardDrive}GB</div>
+    <div>Processor Speed: ${computer.specs.processor}Ghz</div>
+</section>`
+    return computerHtmlSection
+}
+const stringReturnedFromFunction = computerHtmlMaker(computer)
+console.log(stringReturnedFromFunction)
